@@ -90,6 +90,9 @@ function gg_underscore_tw_scripts() {
 	wp_enqueue_style( 'gg-underscore-tw-style', get_stylesheet_uri(), array(), GG_UNDERSCORE_TW_VERSION );
 	wp_enqueue_script( 'gg-underscore-tw-script', get_template_directory_uri() . '/js/script.min.js', array(), GG_UNDERSCORE_TW_VERSION, true );
 
+	// Adding Alpine js Support
+	wp_enqueue_script('alpine-js', 'https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js', array());
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
