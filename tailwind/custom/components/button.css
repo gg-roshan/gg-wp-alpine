@@ -1,0 +1,7 @@
+.ta-primary-btn {
+    @apply bg-nebula-500 border border-nebula-500 text-base px-11 py-6 flex w-max text-midnight-100 no-underline;
+}
+
+.ta-secondary-btn {
+    @apply bg-midnight-500 border border-midnight-100 text-base px-11 py-6 flex w-max text-midnight-100 no-underline;
+}

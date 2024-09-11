@@ -1,0 +1,180 @@
+/* Custom CSS keyframe animations by Gilligan Group */
+/* Define animation by keyframe classes & assign to 'data-scroll' element */
+/* Add datascroll attribute to html element and relevant css animation class name */
+/* Add animations script to your project to play animation when the element is in the viewport */
+
+
+
+
+/* Paused Animation by default */
+[data-scroll] {
+    animation-play-state: paused;
+}
+
+/* Common Animation Settings */
+[data-scroll].fade-up, .fade-up,
+[data-scroll].zoom-in, .zoom-in,
+[data-scroll].fade-right, .fade-right,
+[data-scroll].fade-down, .fade-down {
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+}
+
+[data-scroll].fade-up, .fade-up {
+    animation-name: fade-up;
+}
+
+[data-scroll].fade-down, .fade-down {
+    animation-name: fade-down;
+}
+
+[data-scroll].fade-right, .fade-right {
+    animation-name: fade-right;
+}
+
+[data-scroll].zoom-in, .zoom-in {
+    animation-name: zoom-in;
+}
+
+/* Reduce Motion preference for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    [data-scroll].fade-up, .fade-up {
+        animation: none !important;
+    }
+    [data-scroll].fade-right, .fade-right {
+        animation: none !important;
+    }
+}
+
+/* Remove animation on mobile */
+@media (max-width: 767px) {
+    [data-scroll].fade-up, .fade-up,
+    [data-scroll="in"], [data-scroll="in"].fade-up {
+        animation: none !important;
+    }
+    [data-scroll].fade-right, .fade-right,
+    [data-scroll="in"], [data-scroll="in"].fade-right {
+        animation: none !important;
+    }
+}
+
+/* Animation Play State */
+[data-scroll="in"] {
+    animation-play-state: running !important;
+}
+
+/* Define your css keyframe animations below */
+/* Add these to the data attributes above! */
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        animation-timing-function: cubic-bezier(0, 0, .58, 1);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-right {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+        animation-timing-function: cubic-bezier(0, 0, .58, 1);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Define animations */
+@keyframes fade-down {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+        animation-timing-function: cubic-bezier(0.2, 0.5, 0, 1);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Define animations */
+@keyframes zoom-in {
+    from {
+        transform: scale(1.5);
+        animation-duration: 5;
+        animation-timing-function: cubic-bezier(0.2, 0.5, 0, 1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* Clip-Path Animation from Right to Left */
+@keyframes mask-right-left {
+    0% {
+        clip-path: inset(0 0 0 100%);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* Apply Clip-Path Animation */
+[data-scroll].mask-right-left, .mask-right-left {
+    animation-name: mask-right-left;
+    animation-duration: 1s; /* Adjust as needed */
+    animation-timing-function: cubic-bezier(.66,-0.01,0,1.01);
+    animation-fill-mode: both;
+    animation-play-state: paused;
+}
+
+/* Clip-Path Animation from Left to Right */
+@keyframes mask-left-right {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* Apply Clip-Path Animation */
+[data-scroll].mask-left-right, .mask-left-right {
+    animation-name: mask-left-right;
+    animation-duration: 1s; /* Adjust as needed */
+    animation-timing-function: cubic-bezier(.66,-0.01,0,1.01);
+    animation-fill-mode: both;
+    animation-play-state: paused;
+}
+
+
+
+
+/* Assign Delay Attribute */
+
+[data-delay] {
+    animation-delay: calc(var(--delay) * 0.1s);
+}
+
+[data-delay="1"] { --delay: 1; }
+[data-delay="2"] { --delay: 2; }
+[data-delay="3"] { --delay: 3; }
+[data-delay="4"] { --delay: 4; }
+[data-delay="5"] { --delay: 5; }
+[data-delay="6"] { --delay: 6; }
+[data-delay="7"] { --delay: 7; }
+[data-delay="8"] { --delay: 8; }
+[data-delay="9"] { --delay: 9; }
+[data-delay="10"] { --delay: 10; }
+
+

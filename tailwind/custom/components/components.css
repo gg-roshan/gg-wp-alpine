@@ -1,0 +1,191 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `components` layer
+ *
+ * “Add more opinionated, complex classes like buttons, form controls, alerts,
+ * etc; the sort of pre-built components you often see in other frameworks that
+ * you might need to override with utility classes.”
+ *
+ * — from https://tailwindcss.com/docs/plugins#adding-components
+ */
+
+/**
+ * Post title styles
+ *
+ * These will be applied to all headings with a `page-title` or `entry-title`
+ * class on the frontend and to the post title in the block editor.
+ *
+ * The supplied styles are meant to match the default `h1` classes from
+ * Tailwind Typography.
+ */
+.page-title,
+.entry-title {
+	@apply max-w-content mx-auto mb-6 text-3xl font-extrabold text-neutral-900;
+}
+
+/**
+ * Layout styles for centered content areas
+ *
+ * If you are controlling the width of your content area with styles applied
+ * to its container, you can delete the following styles whose selectors begin
+ * with `.page-content >` and `.entry-content >`. For more details, please see
+ * the following:
+ *
+ * https://make.wordpress.org/core/2021/06/29/on-layout-and-content-width-in-wordpress-5-8/
+ */
+
+ 
+
+/**
+
+ .page-content > *,
+.entry-content > * {
+
+	@apply max-w-content mx-auto;
+}
+
+.entry-content > .alignwide {
+
+	@apply max-w-wide;
+}
+
+.entry-content > .alignfull {
+	@apply max-w-none;
+}
+
+.entry-content > .alignleft {
+	@apply float-left mr-8;
+}
+
+.entry-content > .alignright {
+	@apply float-right ml-8;
+}
+
+.animate {
+	@apply transition-all ease-in-out duration-300;
+}
+#primary-menu li{
+	@apply hover:text-highland-600 animate;
+}
+
+.primary-btn {
+	@apply bg-highland-600 px-6 py-3;
+}
+
+*/
+
+.ww-heading-wrapper h2, .tb-heading-wrapper h2, .faq-heading-wrapper h2{
+	@apply text-5xl font-franie m-0;
+
+	span {
+		@apply text-5xl font-franie m-0;
+	}
+}
+
+.ww-content-wrapper p {
+	@apply text-base text-midnight-100;
+}
+
+.cb-content-wrapper {
+
+	p {
+		@apply m-0;
+	}
+
+	ul {
+		@apply m-0 p-0 grid grid-cols-2 gap-y-8 gap-x-14 !text-base list-none;
+
+		li {
+			@apply relative flex items-center col-span-2 lg:col-span-1 pl-16 text-base before:content-[url('/wp-content/themes/tykee-advisory/theme/resources/icons/tick.svg')] before:absolute before:left-0;
+		}
+	}
+
+}
+
+.service-heading-wrapper h2, .contact-heading-wrapper h2, .industry-heading-wrapper h2{
+	@apply text-5xl font-franie m-0 text-white;
+
+	span {
+		@apply text-5xl font-franie m-0;
+	}
+}
+
+.service-content-wrapper p {
+	@apply text-white !text-base !leading-normal;
+}
+
+
+.footer-contact-wrapper {
+	p, span {
+		@apply text-base;
+	}
+}
+
+.contact-item-wrapper {
+
+	@apply flex flex-col gap-y-3 !text-white !text-base; 
+
+	p {
+		@apply p-0 m-0 !text-base !leading-7;
+	}
+
+	a {
+		@apply text-white;
+	}
+
+} 
+
+.ta-arrow {
+	@apply xl:before:content-[''] xl:before:w-9 xl:before:z-10 xl:before:absolute xl:before:-left-16 xl:before:h-full xl:before:bg-arrow xl:before:bg-no-repeat xl:before:bg-right xl:before:bg-contain xl:before:top-1/2 xl:before:-translate-y-1/2;
+}
+
+/* Hero Banner Styling */
+
+.hero-heading-wrapper h2{
+	@apply !text-5xl md:!text-6xl font-franie m-0 text-white;
+
+	span {
+		@apply !text-5xl md:!text-6xl font-franie m-0;
+	}
+}
+
+.clip-custom-shape-lg {
+	/* clip-path: polygon(140% 0, 75% 50%, 140% 100%, 50% 100%, 0% 50%, 50% 0); */
+	clip-path: polygon(120% 0, 70% 50%, 120% 100%, 50% 100%, 0% 50%, 50% 0);
+}
+
+@media (min-width: 1400px) {
+	.clip-custom-shape-lg {
+		clip-path: polygon(120% 0, 65% 50%, 120% 100%, 50% 100%, 0% 50%, 50% 0);
+	}
+
+}
+.clip-hero-custom-shape-lg {
+	/* clip-path: polygon(140% 0, 75% 50%, 140% 100%, 50% 100%, 0% 50%, 50% 0); */
+	/* clip-path: polygon(120% 0%, 70% 50%, 120% 100%, 80% 100%, 5% 50%, 80% 0); */
+	clip-path: polygon(120% 25%, 70% 50%, 120% 70%, 100% 100%, 0% 50%, 100% 0%);
+}
+
+@media (min-width: 1400px) {
+	.clip-hero-custom-shape-lg {
+		clip-path: polygon(120% 0%, 70% 50%, 120% 100%, 80% 100%, 5% 50%, 80% 0);
+	}
+
+}
+
+
+/* Accordion Content */
+
+.accordion-content p {
+	@apply !text-base m-0 leading-7;
+}
+
+
+
+.cta-heading-wrapper h2 {
+
+	@apply !text-4xl font-franie m-0 text-white;
+
+	span {
+		@apply !text-4xl font-franie m-0;
+	}
+}

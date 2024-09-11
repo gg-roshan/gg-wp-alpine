@@ -1,0 +1,59 @@
+/**
+ * Custom `@font-face` rules
+ *
+ * These will be added immediately before Tailwind’s `base` layer.
+ */
+
+
+ @font-face {
+    font-family: 'Franie';
+    font-style: normal;
+    font-weight: '400';
+    font-display: swap;
+    src: url('/wp-content/themes/tykee-advisory/theme/resources/fonts/Franie-Regular.woff') format('woff');
+ }
+
+ /* @font-face {
+    font-family: 'Franie';
+    font-style: normal;
+    font-weight: '600';
+    font-display: swap;
+    src: url('/wp-content/themes/tykee-advisory/theme/resources/fonts/Franie-SemiBold.woff') format('woff');
+ } */
+
+/*
+ @font-face {
+    font-family: 'Franie';
+    font-style: normal;
+    font-weight: '700';
+    font-display: swap;
+    src: url('/wp-content/themes/tykee-advisory/theme/resources/fonts/Franie-Bold.woff') format('woff');
+ } */
+
+
+ /* Import woff2 */
+
+ @font-face {
+    font-family: 'Franie';
+    font-style: normal;
+    font-weight: '400';
+    font-display: swap;
+    src: url('/wp-content/themes/tykee-advisory/theme/resources/fonts/Franie-Regular.woff2') format('woff2');
+ }
+
+ /* @font-face {
+    font-family: 'Franie';
+    font-style: normal;
+    font-weight: '600';
+    font-display: swap;
+    src: url('/wp-content/themes/tykee-advisory/theme/resources/fonts/Franie-SemiBold.woff2') format('woff2');
+ } */
+
+
+ /* @font-face {
+    font-family: 'Franie';
+    font-style: normal;
+    font-weight: '700';
+    font-display: swap;
+    src: url('/wp-content/themes/tykee-advisory/theme/resources/fonts/Franie-Bold.woff2') format('woff2');
+ } */ 

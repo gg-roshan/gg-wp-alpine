@@ -1,0 +1,26 @@
+#primary-menu {
+    @apply !flex text-base text-white gap-x-11 lowercase;
+
+    li {
+        @apply py-6 relative;
+    }
+
+    li.menu-item-has-children {
+        @apply relative pr-3 after:content-[''] after:w-2 after:z-50 after:absolute after:-right-3 after:h-full after:bg-arrow after:bg-no-repeat after:bg-right after:bg-contain after:top-1/2 after:-translate-y-1/2 after:-rotate-90 animate hover:after:rotate-90;
+    }
+
+    .sub-menu {
+        @apply hidden visible absolute w-80 -bottom-24 bg-midnight-500 animate px-5 py-2 rounded-[5px] shadow-menu border border-midnight-100 divide-y  divide-midnight-100;
+    
+        li {
+            @apply !py-3;
+        }
+    }
+    
+    li.menu-item-has-children:hover > ul.sub-menu {
+        visibility: visibile;
+        display: flex;
+        flex-direction: column;
+    }
+}
+

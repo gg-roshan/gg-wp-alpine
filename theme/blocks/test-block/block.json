@@ -1,0 +1,16 @@
+{
+    "name": "test-block",
+    "title": "Test Block",
+    "description": "Basic Editable Test Block",
+    "category": "featured",
+    "icon": "align-center",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "test-block.php"
+    },
+    "supports": {
+      "color": {
+        "background": true
+      }
+    }
+}

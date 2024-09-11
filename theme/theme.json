@@ -1,0 +1,162 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"styles": {
+      "elements": {
+        "link": {
+          "typography": {
+            "textDecoration": "inherit"
+          }
+        }
+      }
+    },
+	"settings": {
+		"layout": {
+			"contentSize": "60rem",
+			"wideSize": "87.5rem"
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"color": {
+			"palette": [
+				{
+					"slug": "nebula-500",
+					"color": "#EF3740",
+					"name": "nebula-500"
+				},
+				{
+					"slug": "midnight-500",
+					"color": "#05253a",
+					"name": "midnight-500"
+				},
+				{
+					"slug": "midnight-100",
+					"color": "#dff2ff",
+					"name": "midnight-100"
+				},
+				{
+					"slug": "highland-400",
+					"color": "#f97077",
+					"name": "Highland 400"
+				},
+				{
+					"slug": "highland-100",
+					"color": "#fee2e3",
+					"name": "Highland 100"
+				},
+				{
+					"slug": "highland-50",
+					"color": "#fef2f3",
+					"name": "Highland 50"
+				},
+				{
+					"slug": "blue-charcoal-900",
+					"color": "#253e55",
+					"name": "Blue Charcoal 900"
+				},
+				{
+					"slug": "blue-charcoal-600",
+					"color": "#336a96",
+					"name": "Blue Charcoal 900"
+				},
+				{
+					"slug": "blue-charcoal-100",
+					"color": "#e8eff6",
+					"name": "Blue Charcoal 100"
+				},
+				{
+					"slug": "body-font",
+					"color": "#4B5563",
+					"name": "Body Font"
+				}
+			]
+		},
+		"typography": {
+			"fluid": true,
+			"fontSizes": [
+				{
+				"name": "sm",
+				"slug": "sm",
+				"size": "0.8rem"
+				},
+				{
+				"slug": "base",
+				"name": "base",
+				"size": "1rem"
+				},
+				{
+				"slug": "lg",
+				"name": "Lg",
+				"size": "1.125rem"
+				},
+				{
+				"slug": "xl",
+				"name": "xl",
+				"size": "1.25rem"
+				},
+				{
+				"slug": "2xl",
+				"name": "2xl",
+				"size": "1.5rem"
+				},
+				{
+				"slug": "3xl",
+				"name": "3xl",
+				"size": "1.875rem"
+				},
+				{
+				"slug": "4xl",
+				"name": "4xl",
+				"size": "2.25rem"
+				},
+				{
+				"slug": "5xl",
+				"name": "5xl",
+				"size": "3rem"
+				},
+				{
+				"slug": "6xl",
+				"name": "6xl",
+				"size": "4rem"
+				},
+				{
+				"slug": "7xl",
+				"name": "7xl",
+				"size": "4.5rem"
+				}
+			],
+			"fontFamilies": [
+				{
+					"name": "Franie",
+					"slug": "Franie",
+					"fontFamily": "'Franie', san-seriff",
+					"fontFace": [
+						{
+							"fontFamily": "Franie",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["'/wp-content/themes/tykee-advisory/theme/resources/fonts/Franie-Regular.woff'"]
+						},
+						{
+							"fontFamily": "Franie",
+							"fontWeight": "600",
+							"fontStyle": "semibold",
+							"fontStretch": "normal",
+							"src": ["'/wp-content/themes/tykee-advisory/theme/resources/fonts/Franie-SemiBold.woff'"]
+						},
+						{
+							"fontFamily": "Franie",
+							"fontWeight": "700",
+							"fontStyle": "bold",
+							"fontStretch": "normal",
+							"src": ["'/wp-content/themes/tykee-advisory/theme/resources/fonts/Franie-Bold.woff'"]
+						}
+					]
+				}
+			]
+		}
+	}
+}
