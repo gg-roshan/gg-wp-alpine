@@ -1,7 +1,6 @@
 <?php
 $heading = get_field('heading');
 $items = get_field('items');
-
 ?>
 
 <div <?php echo get_block_wrapper_attributes([

@@ -138,3 +138,52 @@ function gg_underscore_tw_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'gg_underscore_tw_widgets_init' );
+
+// Initialize ACF Local JSON
+function my_acf_json_save_point( $path ) {
+    return get_stylesheet_directory() . '/acf-json';
+}
+add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
+
+// Modify filename to match with the component name
+// function custom_acf_json_filename( $filename, $post, $load_path ) {
+//     $filename = str_replace(
+//         array(
+//             ' ',
+//             '_',
+//         ),
+//         array(
+//             '-',
+//             '-'
+//         ),
+//         $post['title']
+//     );
+
+//     $filename = strtolower( $filename ) . '.json';
+
+//     return $filename;
+// }
+// add_filter( 'acf/json/save_file_name', 'custom_acf_json_filename', 10, 3 );
+
+
+/***
+****
+	Creating a Local JSON File name as per the block or field name  
+	will create multiple files if we make changes to the Field Name and 
+	Can revert if we change to the old name but create the new file
+****
+*/
+
+
+
+// Adding Custom Loading Point for ACF
+function my_acf_json_load_point( $paths ) {
+    // Remove the original path (optional).
+    unset($paths[0]);
+
+    // Append the new path and return it.
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+
+    return $paths;    
+}
+add_filter( 'acf/settings/load_json', 'my_acf_json_load_point' );
